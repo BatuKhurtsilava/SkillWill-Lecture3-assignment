@@ -24,14 +24,14 @@ console.log(func(1,2,3,4));
 
 const reader = function name(user) {
 const{ banks} = user;
-const{city} = banks[2]
+const{address : {city}} = banks[2]
 return city;
 };
 
 //Test
 
 console.log(reader({
-  banks: [1,2, {city: 'tbilisi'}],
+  banks: [1,2, {address :{city: 'tbilisi'}],
 }));
 
 
